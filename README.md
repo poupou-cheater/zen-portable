@@ -50,3 +50,19 @@ Thanks to all the partners of Zen for their support and contributions:
 <a href="https://blacksmith.sh">
   <img src="./docs/assets/blacksmith-yellow.png" width="350px"/>
 </a>
+
+---
+
+# this is gonna be an unofficial portable zen browser
+
+### Main Features
+
+- [ ] **Fully Portable:** Standalone single EXE file (no wrapper needed, unlike [portableapp](https://portableapps.com/))
+- [ ] **Hardware-Independent Security:** Full token-based AES-256 password encryption (not bound to Windows DPAPI). **more explain feature in [security](SECURITY.md)**
+
+### other little feature
+
+- [ ] **Enhanced Boosts:** Ability to move and rearrange page elements instead of just zapping them.
+- [ ] **Easy Inspector Zap:** Right-click any element in the inspector and select "Zap" to permanently hide it and automatically add it to your Boosts.
+- [ ] **Icon Library:** Expanded icon selection powered by [Icones.js](https://icones.js.org/).
+- [ ] **better screen share :** more native light weight and fast screen share (directx11)

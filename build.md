@@ -188,9 +188,3 @@ npm run bootstrap
 npm run reset-ff && npm run init && npm run build
 
 ```
-
-
-
-```
-
-```

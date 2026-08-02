@@ -13,6 +13,9 @@ The following resources are essential for a successful build. Without them, you 
 * **Python 3** – Needed for running build scripts and automation tools.
 * **Node.js 21+** – Required for managing dependencies and running JavaScript-based tools.
 * **sccache** – A caching tool that speeds up rebuilds by storing compiled objects.
+```
+cargo install sccache
+```
 * **Rust and Cargo** – Required to apply Firefox patches.
 
 > [!WARNING]

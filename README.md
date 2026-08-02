@@ -51,6 +51,9 @@ Thanks to all the partners of Zen for their support and contributions:
   <img src="./docs/assets/blacksmith-yellow.png" width="350px"/>
 </a>
 
+### i added little instruction how to build it with sccache if you got same issue as me to kill long compilation localy
+[build](build.md)
+
 ---
 
 # this is gonna be an unofficial portable zen browser

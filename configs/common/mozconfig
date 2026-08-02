@@ -28,7 +28,9 @@ export CARGO_BUILD_JOBS=16
 
 # --- FORCER SCCACHE (60 GB cache limit) ---
 export SCCACHE_CACHE_SIZE=60G
+export MOZ_CALL_CACHE=1
 mk_add_options 'export SCCACHE_CACHE_SIZE=60G'
+mk_add_options 'export MOZ_CALL_CACHE=1'
 ac_add_options --with-ccache=C:/Users/user/.cargo/bin/sccache.exe
 mk_add_options 'export RUSTC_WRAPPER=C:/Users/user/.cargo/bin/sccache.exe'
 mk_add_options 'export CCACHE_CPP2=yes'

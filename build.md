@@ -35,7 +35,24 @@ cargo install sccache
 | Variable | Value | Purpose |
 | :--- | :--- | :--- |
 | **`SCCACHE_DIR`** | `C:\Users\<YourUsername>\.cache\sccache` | Forces `sccache` to use your local disk instead of GitHub cloud cache. |
+| **`SCCACHE_CACHE_SIZE`** | `60G` | Increases maximum sccache cache size to hold full browser compilation objects. |
 | **`MOZ_CALL_CACHE`** | `1` | Forces Mozilla's build system (`mach`) to activate `sccache` locally. |
+
+Alternatively, set the max disk cache size in `C:\Users\<YourUsername>\AppData\Roaming\Mozilla\sccache\config\config`:
+```toml
+[cache.disk]
+size = 64424509440 # 60 GiB
+```
+
+You can also force `sccache` explicitly inside `configs/common/mozconfig`:
+```bash
+export SCCACHE_CACHE_SIZE=60G
+export MOZ_CALL_CACHE=1
+mk_add_options 'export SCCACHE_CACHE_SIZE=60G'
+mk_add_options 'export MOZ_CALL_CACHE=1'
+ac_add_options --with-ccache=C:/Users/<YourUsername>/.cargo/bin/sccache.exe
+mk_add_options 'export RUSTC_WRAPPER=C:/Users/<YourUsername>/.cargo/bin/sccache.exe'
+```
 
 ---
 
@@ -171,12 +188,11 @@ git submodule update --init --recursive
 
 
 
-### Q: "npm run init" fails?
+### Q: "npm run init" fails or "rlbox.wasm: No such file or directory"?
 
-* Manually bootstrap the project:
+* Manually bootstrap the project to download required WASI toolchains:
 ```bash
 npm run bootstrap
-
 ```
 
 
